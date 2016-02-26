@@ -1,6 +1,7 @@
 FROM alpine:3.3
 
 RUN apk add --update \
+      groff \
       python \
       py-pip \
   && pip install awscli \
