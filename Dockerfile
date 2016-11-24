@@ -1,12 +1,11 @@
 FROM alpine:3.4
 
-RUN apk add --update \
+RUN apk add --no-cache \
       groff \
       python \
       py-pip \
   && pip install awscli \
-  && apk --purge del -v py-pip \
-  && rm -rf /var/cache/apk/*
+  && apk --purge del -v py-pip
 
 ENTRYPOINT ["aws"]
 
