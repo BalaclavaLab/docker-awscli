@@ -1,4 +1,6 @@
-FROM alpine:3.4
+FROM alpine:3.5
+
+ENV PAGER='busybox less'
 
 RUN apk add --no-cache \
       groff \
