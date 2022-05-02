@@ -4,10 +4,10 @@ ENV PAGER='busybox less'
 
 RUN apk add --no-cache \
       groff \
-      python \
-      py-pip \
-  && pip install awscli \
-  && apk --purge del -v py-pip
+      python3 \
+      py3-pip \
+  && pip3 install six awscli \
+  && apk --purge del -v py3-pip
 
 ENTRYPOINT ["aws"]
 
